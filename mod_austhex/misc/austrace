@@ -1,44 +1,46 @@
-#!/bin/sh
-
-# This file outputs a list of pings and traceroutes for a server list to the screen.
-
+#! /bin/sh
+#
+# $Id$
+#
+# This file outputs a list of pings and traceroutes for a server list to the
+# screen.
+#
 # Adrian Chadd <adrian@psinet.net.au>
 # Updated 22 March - Server cleanups
 # Updated 10 April - Cleaned up servers and moved hostname, set email to routing@
+#
 
-# Change this reflect your hostname, then run
-HOSTNAME="halebop.seark.net"
+
+# Uncomment and change this reflect your real hostname, then run
+#HOSTNAME="server.somewhere.com.au"
+
 
 
 # Lets firstly define how many servers to ping/traceroute
-
-HOSTCOUNT="15"
+HOSTCOUNT="13"
 
 # Now lets define each server.
-
-HOST1="eerie.mi.us.austnet.org"
+HOST1="spin.nsw.au.austnet.org"
 HOST2="webmaster.ca.us.austnet.org"
-HOST3="aqua.fl.us.austnet.org"
+HOST3="yoyo.vic.au.austnet.org"
 HOST4="iinet.wa.au.austnet.org"
-HOST5="onenet.nsw.au.austnet.org"
+HOST5="kas.vic.au.austnet.org"
 HOST6="netspace.vic.au.austnet.org"
-HOST7="ozemail.nsw.au.austnet.org"
+HOST7="bohica.tx.us.austnet.org"
 HOST8="pacific.nsw.au.austnet.org"
 HOST9="pacific.sg.austnet.org"
-HOST10="firstlink.nsw.au.austnet.org"
-HOST11="powerup.qld.au.austnet.org"
-HOST12="catcha.sg.austnet.org"
-HOST13="starhub.sg.austnet.org"
-HOST14="eastciti.sg.austnet.org"
-HOST15="phoenix.uk.eu.austnet.org"
+HOST10="tornado.no.eu.austnet.org"
+HOST11="catcha.sg.austnet.org"
+HOST12="starhub.sg.austnet.org"
+HOST13="mediacorp.sg.austnet.org"
 
 # Now lets set the packet count for the ping.
 PINGCOUNT="50"
 
 # Now lets set the location of the ping, traceroute and mail binaries
 
-# CHeck the system we are on :)
 
+# Check the system we are on :)
 if [ "`uname`" = "Linux" ]; then
   PING="/bin/ping"
   TRACEROUTE="/usr/bin/traceroute"
@@ -56,7 +58,6 @@ fi
 EMAIL="routing@austnet.org"
 
 # Ok - grab a temp file name
-
 TEMPFILE="/tmp/austrace.temp"
 
 rm -f $TEMPFILE 1> /dev/null 2> /dev/null # Lets be quiet about this :)
@@ -97,17 +98,14 @@ fi
 
 
 # Now lets do the traceroute / ping bit.
-
 COUNT="0"
 
 # Main loop
-
 while [ "$COUNT" != "$HOSTCOUNT" ]; do
   # First update the counter.
   COUNT="`expr $COUNT + 1`"
 
   # Next say what we're doing.
-
   eval TARGETHOST=\$HOST${COUNT}
 
   if [ "$TARGETHOST" = "" ]; then
@@ -117,7 +115,6 @@ while [ "$COUNT" != "$HOSTCOUNT" ]; do
     echo
      
     # Next - ping
-  
     $PING -c $PINGCOUNT -q $TARGETHOST
   
     echo
@@ -139,9 +136,7 @@ echo >> $TEMPFILE
 echo "Done." >> $TEMPFILE
 
 # Now mail it. :)
-
 cat $TEMPFILE | $MAIL -s "AUSTnet server pings / traceroutes from host $HOSTNAME ($REALHOST)" $EMAIL
 
 # Now tidy up.
-
 rm -f $TEMPFILE 1> /dev/null 2> /dev/null
