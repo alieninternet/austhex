@@ -1,0 +1,110 @@
+/* $Id$
+ *
+ * Copyright © 2003 Simon Butcher <pickle@alien.net.au>
+ *
+ * This file is a part of AustHex.
+ * 
+ * AustHex is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * AustHex is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with AustHex; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+autogen definitions language;
+
+/* 
+ * Hey you! Yeah you, the developer/translator editing this file! There's some
+ * stuff you should know..
+ *
+ * Firstly, this file *MUST* be opened/saved in the UTF-8 character set. This
+ * is a requirement imposed by KineIRCd, and if you fail to do so you'll have
+ * an angry mob chasing after you with torches and pitch-forks... maybe...
+ *
+ * You'll need a UTF-8 editor which doesn't insert weird meta-data into the
+ * file (so Windows Notepad is out - sorry). One editor which has been used
+ * with a great deal of success is UniRed (http://www.sf.net/projects/unired).
+ * Depending on the editor, you'll most likely need to select the character as
+ * UTF-8 when opening (and maybe also when saving) the file.
+ *
+ * The language data files generated from this file are designed for KineIRCd's
+ * language engine, and therefore various rules apply. You may wish to read
+ * the documentation for the language file format:
+ * http://cvs.sf.net/cgi-bin/viewcvs.cgi/kineircd/kineircd/doc/LangTags?rev=HEAD
+ *
+ * Don't forget to use whatever is considered the formal, international form of
+ * your language (ie. International English over American English), and
+ * include the correct glyphs to represent the words (ie. '你好', 'שלום' and
+ * 'здравствулте', instead of their latin equivalents, 'ni hao', 'shalom', and
+ * 'zdravstvuite' respectively). Proper use of language you're translating,
+ * and its alphabet is paramount to the quality of the translation.
+ */
+
+
+
+/*
+ * What translations this definition file contains
+ */
+languages = {
+   langCode		= "en";
+   langName		= "English";
+   langMaintainer	= "pickle@alien.net.au";
+};
+
+
+
+/*
+ * Supplemental RPL_WHOISSTAFF data for KineIRCd's mod_irc2user. These are
+ * AustNet specific since they relate closely to AustNet's services.
+ *
+ * Levels 1 through 8 are reserved for ASD, and level 10 is reserved for
+ * Sprint access.
+ */
+tag = {
+   name		= "irc2_RPL_WHOISSTAFF_1";
+   data_en	= "is able to retrieve passwords, deal with channel "
+                  "suspensions";
+};
+
+tag = {
+   name		= "irc2_RPL_WHOISSTAFF_2";
+   data_en	= "is able to retrieve passwords, deal with channel "
+                  "suspensions, global ChanOP access";
+};
+
+tag = {
+   name		= "irc2_RPL_WHOISSTAFF_8";
+   data_en	= "is %N's helper of the week";
+};
+
+tag = {
+   name		= "irc2_RPL_WHOISSTAFF_9";
+   data_en	= "is %N's IRC Operator of the week";
+};
+
+tag = {
+   name		= "irc2_RPL_WHOISSTAFF_10";
+   data_en	= "can modify channel modes";
+};
+
+tag = {
+   name		= "irc2_RPL_WHOISSTAFF_200";
+   data_en	= "is an %N lamer";
+};
+
+tag = {
+   name		= "irc2_RPL_WHOISSTAFF_201";
+   data_en	= "is a pain in da butt";
+};
+
+tag = {
+   name		= "irc2_RPL_WHOISSTAFF_203";
+   data_en	= "is a weenor";
+};
