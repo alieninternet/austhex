@@ -11,9 +11,3 @@
 #	[<whitespace>]<filename><whitespace><error message><end-of-line>
 #
 # comment lines begin with '#'
-
-commit_prep Failed to checkout commit_prep
-.indent.pro Failed to checkout .indent.pro
-indent Failed to checkout indent
-commit_prep_perl Failed to checkout commit_prep_perl
-log_accum Failed to checkout log_accum
