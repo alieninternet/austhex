@@ -36,11 +36,21 @@ namespace {
     * details from this text.
     */
    static const char* const infoText[] = {
-      "Copyright (c) 2003 Simon Butcher <pickle@alien.net.au>",
-      "Please report bugs to \037" PACKAGE_BUGREPORT "\037",
+      "      .",
+      "    .d8b.     \002Palladium Connection Monitor/Operator Service\002",
+      "  .d88~88b.",
+      ".o88'   `88o.",
+      " `88b. .d88'",
+      "   \"88o88\"    Copyright (c) 2003 Simon Butcher",
+      "    `888'       <pickle@alien.net.au>",
+      "     888",
+      "   oo888oo",
+      "   \"\"888\"\"",
+      "     888      Please submit all bug reports to:",
+      "     ~~~        \037" PACKAGE_BUGREPORT "\037",
       0
    };
-   
+
    // Information about this module
    static const Kine::Module::Info info = {
       // Firstly, we list the version/copyright information for this module
