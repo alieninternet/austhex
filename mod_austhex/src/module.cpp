@@ -28,6 +28,24 @@
 #include <iostream>
 
 namespace {
+   /* Text for the INFO command; Keep this within 60 chars width.
+    * 
+    * NOTE: that it is in VIOLATION of the GNU GPL to remove any copyright
+    * details from this text.
+    */
+   static const char* const infoText[] = {
+      "\002                     __             __\002",
+      "\002   ____ ___  _______/ /_____  ___  / /_\002    _ _ _  . _ _ _",
+      "\002  / __ `/ / / / ___/ __/ __ \\/ _ \\/ __/\002   _)(\037-\037| \\/|(_(\037-\037_)",
+      "\002 / /_/ / /_/ (__  ) /_/ / / /  __/ /__ \002    support module",
+      "\002 \\__,_/\\__,_/____/\\__/_/ /_/\\___/\\___/\002",
+      "        \037http://www.austnet.org/\037",
+      "",
+      "Copyright (c) 2003 Simon Butcher <pickle@alien.net.au>",
+      "Please report bugs to \037" PACKAGE_BUGREPORT "\037",
+      0
+   };
+
    // Information about this module
    static const Kine::Module::Info info = {
       // Firstly, we list the version/copyright information for this module
@@ -35,7 +53,7 @@ namespace {
       "AustNet Support Module",
       0, // Major version number
       0, // Minor version number
-      0, // INFO text
+      infoText, // INFO text
 	
       // Flags to define how we need to be run
       Kine::Module::Flags::UNIQUE_INSTANCE,
