@@ -108,3 +108,13 @@ tag = {
    name		= "irc2_RPL_WHOISSTAFF_203";
    data_en	= "is a weenor";
 };
+
+
+/*
+ * Stuff used by the mod_irc2user script for austnet
+ */
+tag = {
+   name		= "irc2user_SCRIPT_SERVICE_IS_OFFLINE";
+   data_en	= "We apologise that the service, %p0, is currently "
+                  "unavailable. Please try again shortly.";
+};
