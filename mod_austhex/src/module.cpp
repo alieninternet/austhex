@@ -41,6 +41,7 @@ namespace {
       "\002 \\__,_/\\__,_/____/\\__/_/ /_/\\___/\\___/\002",
       "        \037http://www.austnet.org/\037",
       "",
+      "Copyright (c) 1998 Roger Yerramsetti <rogery@austnet.org>",
       "Copyright (c) 2003 Simon Butcher <pickle@alien.net.au>",
       "Please report bugs to \037" PACKAGE_BUGREPORT "\037",
       0
