@@ -16,6 +16,7 @@ INCLUDES=\
 
 # Source files..
 mod_austhex_la_SOURCES=\
+	src/autoconf.h \
 	src/module.cpp
 
 
