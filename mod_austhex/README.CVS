@@ -1,0 +1,36 @@
+
+Hello there!
+
+If you're reading this, then you've probably checked out this code from the
+repository and you're wondering how you can 'boot-strap' the package to
+compile it.
+
+Well before you can do that, likely that you'll need to install some software.
+Only developers need to follow this step (which is why this README file is
+not distributed with the source code outside of this CVS repository). Some of
+this software may already be installed on your system, but it's recommended
+to use the latest stable versions.
+ 
+In addition to the required compiler and libraries (kineircd, etc), you will
+need to install the following software, in this order:
+
+  1. GNU AutoConf - http://www.gnu.org/software/autoconf/
+  2. GNU AutoMake - http://www.gnu.org/software/automake/
+  3. GNU LibTool - http://www.gnu.org/software/libtool/
+  4. GNU AutoGen - http://www.gnu.org/software/autogen/
+
+Once you have those utilities installed, you will be able to boot-strap the
+package using the Makefile.bs file, as follows:
+
+  make -f Makefile.bs
+
+After which you may then run the "./configure" script as you would with the
+distribution version of this package. If you're planning on modifying the
+source code, you will be wanting to use the "--enable-maintainer-mode" flag
+to allow AutoMake to magically rebuild any of the configuration/makefile
+scripts as needs be.
+
+Since this isn't the distributed version of the code, you're mostly on your
+own.
+
+Good luck!
